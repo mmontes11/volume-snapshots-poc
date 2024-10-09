@@ -1,0 +1,24 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshotContent
+metadata:
+  name: snapcontent-provisioned
+spec:
+  deletionPolicy: Delete
+  driver: storage.rbd.csi.ceph.com
+  source:
+    snapshotHandle: 0001-0007-storage-0000000000000002-ada092c9-635e-4fe9-bdf8-f3b670ba9cbd
+  volumeSnapshotClassName: rook-ceph
+  volumeSnapshotRef:
+    apiVersion: snapshot.storage.k8s.io/v1
+    kind: VolumeSnapshot
+    name: snapshot-provisioned
+    namespace: default
+---
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: snapshot-provisioned
+spec:
+  volumeSnapshotClassName: rook-ceph
+  source:
+    volumeSnapshotContentName: snapcontent-provisioned

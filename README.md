@@ -1,3 +1,3 @@
 # volume-snapshots-poc
 
-- [Vanila `VolumeSnapshot` PoC](./volume-snapshots/)
+- [rook-ceph `VolumeSnapshot` PoC](./rook-ceph/)

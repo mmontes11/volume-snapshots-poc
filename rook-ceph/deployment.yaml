@@ -32,4 +32,7 @@ spec:
       #     claimName: pvc-from-snapshot
       # - name: data
       #   persistentVolumeClaim:
+      #     claimName: pvc-from-snapshot-provisioned
+      # - name: data
+      #   persistentVolumeClaim:
       #     claimName: pvc-from-pvc

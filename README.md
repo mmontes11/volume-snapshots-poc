@@ -1,2 +1,3 @@
 # volume-snapshots-poc
-Kubernetes VolumeSnapshots PoC
+
+- [Vanila `VolumeSnapshot` PoC](./volume-snapshots/)

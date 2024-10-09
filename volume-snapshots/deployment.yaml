@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-recorder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: time-recorder
+  template:
+    metadata:
+      labels:
+        app: time-recorder
+    spec:
+      containers:
+      - name: time-recorder
+        image: alpine:3.18.4
+        command: 
+        - "/bin/sh"
+        - "-c"
+        args:
+        - "while true; do date -u >> /data/dates.txt; sleep 1; tail -n 1 /data/dates.txt; done"
+        volumeMounts:
+        - name: data
+          mountPath: /data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: pvc
+      # - name: data
+      #   persistentVolumeClaim:
+      #     claimName: pvc-from-snapshot
+      # - name: data
+      #   persistentVolumeClaim:
+      #     claimName: pvc-from-pvc

@@ -10,7 +10,7 @@ spec:
   retention:
     expires: "1h"
     maxCount: 5
-  schedule: "*/1 * * * *"
+  schedule: "*/5 * * * *"
   snapshotTemplate:
     labels:
       storage.mmontes.io/snapshot: snapshot

@@ -1,0 +1,17 @@
+apiVersion: snapscheduler.backube/v1
+kind: SnapshotSchedule
+metadata:
+  name: snapshotschedule
+spec:
+  claimSelector:
+    matchLabels:
+      storage.mmontes.io/pvc: pvc
+  disabled: false
+  retention:
+    expires: "1h"
+    maxCount: 5
+  schedule: "*/1 * * * *"
+  snapshotTemplate:
+    labels:
+      storage.mmontes.io/snapshot: snapshot
+    snapshotClassName: rook-ceph

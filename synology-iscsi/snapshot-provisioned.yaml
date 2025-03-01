@@ -1,0 +1,24 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshotContent
+metadata:
+  name: snapcontent-provisioned
+spec:
+  deletionPolicy: Delete
+  driver: csi.san.synology.com
+  source:
+    snapshotHandle: 53702d2b-682d-43fe-b149-2f81642d7ebb  
+  volumeSnapshotClassName: synology-iscsi
+  volumeSnapshotRef:
+    apiVersion: snapshot.storage.k8s.io/v1
+    kind: VolumeSnapshot
+    name: snapshot-provisioned
+    namespace: default
+---
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: snapshot-provisioned
+spec:
+  volumeSnapshotClassName: synology-iscsi
+  source:
+    volumeSnapshotContentName: snapcontent-provisioned

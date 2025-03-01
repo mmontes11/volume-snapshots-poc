@@ -24,15 +24,15 @@ spec:
         - name: data
           mountPath: /data
       volumes:
-      # - name: data
-      #   persistentVolumeClaim:
-      #     claimName: pvc
+      - name: data
+        persistentVolumeClaim:
+          claimName: pvc
       # - name: data
       #   persistentVolumeClaim:
       #     claimName: pvc-from-snapshot
       # - name: data
       #   persistentVolumeClaim:
       #     claimName: pvc-from-snapshot-provisioned
-      - name: data
-        persistentVolumeClaim:
-          claimName: pvc-from-pvc
+      # - name: data
+      #   persistentVolumeClaim:
+      #     claimName: pvc-from-pvc

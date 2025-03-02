@@ -6,8 +6,9 @@ spec:
   deletionPolicy: Delete
   driver: csi.san.synology.com
   source:
-    snapshotHandle: 53702d2b-682d-43fe-b149-2f81642d7ebb  
-  volumeSnapshotClassName: synology-iscsi
+    # SSH into Synology NAS and run "synoiscsiwebapi lun list_snapshot" as root. Then provide the "uuid" field as "snapshotHandle".
+    snapshotHandle: 8e16dc27-0a6a-4d6b-8936-0316f312fd30 
+  volumeSnapshotClassName: synology-iscsi-retain
   volumeSnapshotRef:
     apiVersion: snapshot.storage.k8s.io/v1
     kind: VolumeSnapshot
@@ -19,6 +20,6 @@ kind: VolumeSnapshot
 metadata:
   name: snapshot-provisioned
 spec:
-  volumeSnapshotClassName: synology-iscsi
+  volumeSnapshotClassName: synology-iscsi-retain
   source:
     volumeSnapshotContentName: snapcontent-provisioned

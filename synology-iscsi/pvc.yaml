@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc
 spec:
-  storageClassName: synology-iscsi
+  storageClassName: synology-iscsi-retain
   accessModes:
   - ReadWriteOnce
   resources:

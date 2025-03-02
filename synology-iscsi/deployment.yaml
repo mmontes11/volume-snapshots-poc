@@ -36,3 +36,6 @@ spec:
       # - name: data
       #   persistentVolumeClaim:
       #     claimName: pvc-from-pvc
+      # - name: data
+      #   persistentVolumeClaim:
+      #     claimName: pvc-provisioned

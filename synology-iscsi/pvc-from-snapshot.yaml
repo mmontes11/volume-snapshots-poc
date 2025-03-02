@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-from-snapshot
 spec:
-  storageClassName: synology-iscsi
+  storageClassName: synology-iscsi-retain
   dataSource:
     name: snapshot
     kind: VolumeSnapshot

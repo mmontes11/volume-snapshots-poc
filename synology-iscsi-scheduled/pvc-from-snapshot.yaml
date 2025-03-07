@@ -5,7 +5,7 @@ metadata:
 spec:
   storageClassName: synology-iscsi
   dataSource:
-    name: snapshot
+    name: pvc-snapshotschedule-202503071845
     kind: VolumeSnapshot
     apiGroup: snapshot.storage.k8s.io
   accessModes:

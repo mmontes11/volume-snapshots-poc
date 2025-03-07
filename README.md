@@ -1,5 +1,5 @@
 # volume-snapshots-poc
 
-- [rook-ceph `VolumeSnapshot` PoC](./rook-ceph/)
-- [rook-ceph `SnapshotSchedule` PoC](./snapscheduler)
-- [synology-iscsi `VolumeSnapshot` PoC](./synology-iscsi/)
+- [rook-ceph](./rook-ceph/)
+- [rook-ceph scheduled](./rook-ceph-scheduled/)
+- [synology-iscsi](./synology-iscsi/)

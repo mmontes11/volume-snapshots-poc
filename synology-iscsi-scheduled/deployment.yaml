@@ -12,6 +12,13 @@ spec:
       labels:
         app: time-recorder
     spec:
+      nodeSelector:
+        node.mmontes.io/type: compute-large
+      tolerations:
+        - key: "node.mmontes.io/type"
+          operator: "Equal"
+          value: "compute-large"
+          effect: "NoSchedule"
       containers:
       - name: time-recorder
         image: alpine:3.18.4

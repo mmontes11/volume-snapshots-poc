@@ -2,6 +2,6 @@
 
 - [rook-ceph](./rook-ceph/)
 - [rook-ceph scheduled](./rook-ceph-scheduled/)
-- [synology-iscsi](./synology-iscsi/)
-- [synology-iscsi-scheduled](./synology-iscsi-scheduled/)
+- [synology](./synology/)
+- [synology-scheduled](./synology-scheduled/)
 - [topolvm](./topolvm)

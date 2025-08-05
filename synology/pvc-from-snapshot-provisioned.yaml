@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-from-snapshot
+  name: pvc-from-snapshot-provisioned
 spec:
-  storageClassName: synology-iscsi
+  storageClassName: synology-retain
   dataSource:
-    name: pvc-snapshotschedule-202503071845
+    name: snapshot-provisioned
     kind: VolumeSnapshot
     apiGroup: snapshot.storage.k8s.io
   accessModes:

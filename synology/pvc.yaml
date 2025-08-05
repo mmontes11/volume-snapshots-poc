@@ -2,10 +2,8 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc
-  labels:
-    storage.mmontes.io/pvc: pvc
 spec:
-  storageClassName: synology-iscsi
+  storageClassName: synology-retain
   accessModes:
   - ReadWriteOnce
   resources:

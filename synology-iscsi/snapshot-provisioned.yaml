@@ -7,7 +7,7 @@ spec:
   driver: csi.san.synology.com
   source:
     # SSH into Synology NAS and run "synoiscsiwebapi lun list_snapshot" as root. Then provide the "uuid" field as "snapshotHandle".
-    snapshotHandle: 8e16dc27-0a6a-4d6b-8936-0316f312fd30 
+    snapshotHandle: 5299b327-734e-4838-a889-ac7882874f0e
   volumeSnapshotClassName: synology-iscsi-retain
   volumeSnapshotRef:
     apiVersion: snapshot.storage.k8s.io/v1

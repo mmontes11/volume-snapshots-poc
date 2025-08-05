@@ -16,7 +16,7 @@ spec:
     driver: csi.san.synology.com
     fsType: btrfs
     # SSH into Synology NAS and run "synoiscsiwebapi lun list" as root. Then provide the "uuid" field as "volumeHandle".
-    volumeHandle: d72c9848-18a2-497a-aa6d-9b2363814345
+    volumeHandle: 6f1ddaa0-da9e-49ef-9450-c7c68743c978
   persistentVolumeReclaimPolicy: Retain
   storageClassName: synology-iscsi-retain
   volumeMode: Filesystem
